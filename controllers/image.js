@@ -6,11 +6,11 @@ const app = new Clarifai.App({
 
 const handleApiCall = (req, res) => {
 	app.models
-		.predict('c0c0ac362b03416da06ab3fa36fb58e3', this.state.input
-			// {
-			// 	id: "a403429f2ddf4b49b307e318f00e528b",
-   //   			version: "34ce21a40cc24b6b96ffee54aabff139",
-			// },
+		.predict(
+			{
+				id: "a403429f2ddf4b49b307e318f00e528b",
+     			version: "34ce21a40cc24b6b96ffee54aabff139",
+			},
 		)
 		.then(data => {
 			res.json(data);
